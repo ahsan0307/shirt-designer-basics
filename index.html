@@ -7,6 +7,10 @@
           rel="stylesheet"
           type="text/css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -17,9 +21,37 @@
             T-Shirt Designer
         </h1>
     </div>
-    <div class="shirt">
-        <img src="images/black.png">
+    <div class="flex-container" style="margin-top: 50px;">
+        <div style="margin-right: -270px;">
+        <h4 id="paragraph"  style="margin-top:150px; position:absolute; margin-left:150px; color:white;">404 Not Found</h4>
+        <img src="images/black.png" id="pic" style="width: 400px; height:400px;">
     </div>
+    <div>
+        <h4 class="text-center">Shirt Variant</h4>
+        <button id="greybtn" onclick="gray()"></button>
+        <button id="greenbtn" onclick="green()"></button>
+        <button  id="purplebtn" onclick="purple()"></button>
+        <button id="yellowbtn" onclick="yellow()"></button>
+        <br>
+        <h4> Text Style </h4>
+        <textarea type="text"  class="container" placeholder="404 Not Found" id="theText" style="height: 70px; width: 350px;"> </textarea><br>
+        <br>
+        <label for="colorWell"></label>
+        <input type="color" value="#000000" id="colorWell">
+        <input type="button" id="btn" value="Update" />
+        <input type="button" id="btn2" class="boldText" value="Bold">
+        <input type="button" id="btn3" class="italicText" value="Italic">
+        <input type="button"  class="alignleft" value="left">
+        <input type="button"  class="alignright" value="right">
+        <input type="button" class="aligncenter" value="center">
+          <br>
+          <span> <h4>Text Size </h4> 
+            <input type=button value="increase" onclick="increaseFontSizeBy2px()" />
+            <input type="text" onkeyup="changeTextSize()" id="input" style="width: 30px;">
+            <input type=button value="decrease" onclick="decreaseFontSizeBy2px()"/>
+        </span>
+    </div>
+</div>    
 </main>
 
 <script src="script.js"></script>
