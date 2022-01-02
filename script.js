@@ -34,9 +34,6 @@
         $('.italicText').click(function(){
           $('.container').toggleClass("italic");
         });
-        $('.underlineText').click(function(){
-          $('.container').toggleClass("underline");
-        });
         $('.alignleft').click(function(){
             $('.container').toggleClass("alignleft");
           });
@@ -46,62 +43,55 @@
           $('.alignright').click(function(){
             $('.container').toggleClass("alignright");
           });
-          $('.fontsize').click(function(){
-            $('.container').toggleClass("fontsize");
-          });
-        
-         
         });
-var p = document.getElementById('paragraph');
-var btn = document.getElementById('btn');
-var txt = document.getElementById('theText');
-btn.onclick = function(){
-    p.textContent = txt.value;
-};
-var p = document.getElementById('paragraph');
-var btn = document.getElementById('btn2');
-var txt = document.getElementById('theText');
-btn.onclick = function(){
-    p.style.fontStyle= "bold";
-};
-var p = document.getElementById('paragraph');
-var btn = document.getElementById('btn3');
-var txt = document.getElementById('theText');
-btn.onclick = function(){
-    p.style.fontStyle= "italic";
-};
-function increaseFontSizeBy2px() {
-    txt = document.getElementById('theText');
-    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
-    currentSize = parseFloat(style);
-    txt.style.fontSize = (currentSize + 2) + 'px';
-}
-function decreaseFontSizeBy2px() {
+          var p = document.getElementById('paragraph');
+          var btn = document.getElementById('btn');
+          var txt = document.getElementById('theText');
+          btn.onclick = function(){
+          p.textContent = txt.value;
+          };
+        var p = document.getElementById('paragraph');
+         var btn = document.getElementById('btn2');
+         var txt = document.getElementById('theText');
+            btn.onclick = function(){
+             p.style.fontStyle= "bold";
+              };
+         var p = document.getElementById('paragraph');
+         var btn = document.getElementById('btn3');
+        var txt = document.getElementById('theText');
+         btn.onclick = function(){
+        p.style.fontStyle= "italic";
+          };
+         function increaseFontSizeBy2px() {
+         txt = document.getElementById('theText');
+       style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+         currentSize = parseFloat(style);
+        txt.style.fontSize = (currentSize + 2) + 'px';
+           }
+         function decreaseFontSizeBy2px() {
     txt = document.getElementById('theText');
     style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
     currentSize = parseFloat(style);
     txt.style.fontSize = (currentSize - 2) + 'px';
-}
-function changeTextSize() {
+      }
+   function changeTextSize() {
     var input = document.getElementById('input').value;
-    
-    document.getElementById('theText').style.fontSize = input + "px";
-  }
+     document.getElementById('theText').style.fontSize = input + "px";
+    }
   var colorWell;
-var defaultColor = "#000000";
-
-window.addEventListener("load", startup, false);
-function startup() {
+  var defaultColor = "#000000";
+  window.addEventListener("load", startup, false);
+    function startup() {
     colorWell = document.querySelector("#colorWell");
     colorWell.value = defaultColor;
     colorWell.addEventListener("input", updateFirst, false);
     colorWell.addEventListener("change", updateAll, false);
     colorWell.select();
   }
-  function updateFirst(event) {
-    var p = document.querySelector("textarea");
+     function updateFirst(event) {
+      var p = document.querySelector("textarea");
   
-    if (p) {
+       if (p) {
       p.style.color = event.target.value;
     }
   }
