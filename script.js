@@ -5,6 +5,12 @@
   document.getElementById('pic').src='images/gray.png';
 
 	}
+  function black()
+	{
+
+  document.getElementById('pic').src='images/black.png';
+
+	}
 
 	function green()
 	{
