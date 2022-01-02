@@ -27,14 +27,20 @@
         <img src="images/black.png" id="pic" style="width: 350px; height:350px;">
     </div>
     <div>
-        <h4 class="text-center">Shirt Variant</h4>
+        <div>
+            <strong style="font-size: 15px;">Shirt Variant</strong> 
+            </div>
+            <br>
         <button id="blackbtn" onclick="black()"></button>
         <button id="greybtn" onclick="gray()"></button>
         <button id="greenbtn" onclick="green()"></button>
         <button  id="purplebtn" onclick="purple()"></button>
         <button id="yellowbtn" onclick="yellow()"></button>
+        <br><br>
+        <div>
+        <strong style="font-size: 15px;">Text Style</strong> 
+        </div>
         <br>
-        <h4> Text Style </h4>
         <textarea type="text"  class="container" placeholder="404 Not Found" id="theText" style="height: 70px; width: 250px;"> </textarea><br>
         <br>
         <label for="colorWell"></label>
@@ -46,7 +52,8 @@
         <input type="button"  class="alignright" value="right">
         <input type="button" class="aligncenter" value="center">
           <br>
-          <span> <h4>Text Size </h4> 
+          <br>
+          <span> <strong style="font-size: 15px;">Text Size </strong> 
             <input type=button value="increase" onclick="increaseFontSizeBy2px()" />
             <input type="text" onkeyup="changeTextSize()" id="input" style="width: 30px;">
             <input type=button value="decrease" onclick="decreaseFontSizeBy2px()"/>
